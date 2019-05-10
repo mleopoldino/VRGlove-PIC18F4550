@@ -1,0 +1,86 @@
+/*
+ * File:   TCC_Luva.c
+ * Author: MLS
+ * Version: 1.0
+ * Created on 08 de Abril de 2016, 20:50
+ */
+ 
+#include<18F4550.h>        
+#device ADC = 10
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL2,CPUDIV1,VREGEN,MCLR,PUT
+#use delay(clock=8000000)
+
+#include "LCD8B.c"
+
+void ini_app(void);
+
+void main() {
+
+  //Configura o bit RB0 como entrada 
+  set_tris_b(0b00000001); 
+  //Configura o bit RA0, RA1, RA2 como entrada
+  set_tris_a(0b00000111);
+  
+  //Configuração do ADCON
+  
+  int16 x;     //Variavel q para determinar o sinal digital X
+  int16 y;     //Variavel q para determinar o sinal digital Y
+  int16 z;     //Variavel q para determinar o sinal digital Z
+    
+  setup_adc_ports(AN0_TO_AN3);    //Inicializa ADC nas portas dos registrador an0(RA0), an1(RA1), an2(RA2) e an3(RA3)
+  setup_adc(adc_clock_internal);    //Determina o uso do clock interno para a conversão
+  
+  lcd_ini();      //Inicializa o LCD
+  delay_ms(200);  //Gera um atraso de 200 ms
+  
+  ini_app();      //Mensagem inicial do LCD
+
+  while(true){
+                  
+      delay_ms(250);
+         
+      set_adc_channel(0);     //Configura canal 0   
+      delay_us(20);           //Gera atraso de 20 us
+      X=read_adc();           //Leitura ADC X
+         
+      set_adc_channel(1);     //Configura canal 1   
+      delay_us(20);           //Gera atraso de 20 us
+      Y=read_adc();           //Leitura ADC Y
+
+      set_adc_channel(2);     //Configura canal 2   
+      delay_us(20);           //Gera atraso de 20 us
+      Z=read_adc();           //Leitura ADC Z
+
+      printf(lcd_escreve,"   TCC Luva RV");
+      //printf(lcd_escreve,"\n X%3Ld Y%3Ld Z%3Ld",x,y,z);
+      
+      if(input(pin_b0)==1){
+        do{
+              printf(lcd_escreve,"   TCC Luva RV");
+              printf(lcd_escreve,"\n    Botao On    ");
+              //Gerar codigo para envio do comando para PC
+              
+        } while(input(pin_b0)==1);
+      
+      }
+                
+         //Gerar codigo para enviar as variaveis X,Y,Z para o PC
+         
+      
+  }
+}
+
+void ini_app(void){
+  //Apresentação
+  printf(lcd_escreve,"\f   TCC Luva RV");
+  printf(lcd_escreve,"\n   PIC 18F4550");
+  delay_ms(5500);
+  
+  //Imprime pos X, Y, Z inicial em 00
+  delay_ms(2000);
+  printf(lcd_escreve,"\f"); //Limpa Display
+  printf(lcd_escreve,"\f   TCC Luva RV");
+  printf(lcd_escreve,"\n X=00 Y=00 Z=00 ");
+  delay_ms(2000);
+  }
+

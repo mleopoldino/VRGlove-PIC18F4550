@@ -1,0 +1,4 @@
+--- Info 300 "TCC_LuvaVR.c" Line 46(6,10): More info:   *3* Access violation at address 00000000. Read of address 00000000
+*** Error 44 "TCC_LuvaVR.c" Line 46(6,10): Internal Error - Contact CCS  OUTPUT FILE .map
+      1 Errors,  0 Warnings.
+Build Failed.

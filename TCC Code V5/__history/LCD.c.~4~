@@ -1,0 +1,36 @@
+/*******************************************************************************
+*                  Kit de desenvolvimento ACEPIC PRO V3.0 Rev. B               *
+*                      ACEPIC Tecnologia e Treinamento LTDA                    *
+*                               www.acepic.com.br                              * 
+*                                                                              *
+*Objetivo: Teste LCD                                                           *
+********************************************************************************/
+#include<18F4550.h>        
+#device ADC = 10
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL2,CPUDIV1,VREGEN
+#use delay(clock=48000000)
+
+#include "LCD8B.c"
+
+void main() {
+
+  lcd_ini();
+  
+  delay_ms(200);
+  
+  printf(lcd_escreve,"\f   PIC18F4520   ");
+  printf(lcd_escreve,"\nTEST LCD DISPLAY");
+
+  while(true) {
+               delay_ms(2000);
+               printf(lcd_escreve,"\f"); //Limpa Display
+               printf(lcd_escreve,"Test LCD Display");
+               printf(lcd_escreve,"\n   PIC18F4520   ");
+               delay_ms(2000);
+               printf(lcd_escreve,"\f   PIC18F4520");
+               printf(lcd_escreve,"\nTEST LCD DISPLAY");
+              }
+
+}
+
+

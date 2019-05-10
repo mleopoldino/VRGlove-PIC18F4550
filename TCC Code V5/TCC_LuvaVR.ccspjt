@@ -1,0 +1,110 @@
+[PROJECT]
+Target=TCC_LuvaVR.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=TCC_LuvaVR.c
+[TCC_LuvaVR.c]
+Type=4
+[mru-list]
+1=TCC_LuvaVR.c
+
+[defines]
+buildcount=31
+
+[ProjectLog]
+Days=5
+D1=09-04-2016
+D1_L=2
+D1_L1=[11819]Stopped Editing.
+TotalEdit=91
+TotalDebug=0
+D1_E=8
+D1_D=0
+D1_L2=[11819]Project Closed.
+D2=12-04-2016
+D2_L=24
+D2_L1=[49944]Project Opened.
+D2_L2=[49957]Started Editing.
+D2_L3=[50257]Stopped Editing.
+D2_L4=[50275]Started Editing.
+D2_L5=[52887]Stopped Editing.
+D2_E=67
+D2_D=0
+D2_L6=[52887]Project Closed.
+D2_L7=[53598]Project Opened.
+D2_L8=[53618]Started Editing.
+D2_L9=[53925]Stopped Editing.
+D2_L10=[56409]Project Closed.
+D2_L11=[57435]Project Opened.
+D2_L12=[57567]Started Editing.
+D2_L13=[58421]Stopped Editing.
+D2_L14=[58615]Started Editing.
+D2_L15=[59366]Stopped Editing.
+D2_L16=[59704]Project Closed.
+D2_L17=[59827]Project Opened.
+D2_L18=[59845]Started Editing.
+D2_L19=[60103]Stopped Editing.
+D2_L20=[60103]Project Closed.
+D2_L21=[60131]Project Opened.
+D2_L22=[60142]Project Closed.
+D2_L23=[60179]Project Opened.
+D2_L24=[60199]Project Closed.
+D3=14-04-2016
+D3_L=24
+D3_L1=[48748]Project Opened.
+D3_L2=[48779]Started Editing.
+D3_L3=[49253]Stopped Editing.
+D3_L4=[49951]Started Editing.
+D3_L5=[50251]Stopped Editing.
+D3_L6=[50974]Started Editing.
+D3_L7=[51010]Stopped Editing.
+D3_E=11
+D3_D=0
+D3_L8=[51010]Project Closed.
+D3_L9=[53952]Project Opened.
+D3_L10=[53973]Started Editing.
+D3_L11=[54606]Stopped Editing.
+D3_L12=[56037]Project Closed.
+D3_L13=[72791]Project Opened.
+D3_L14=[72832]Started Editing.
+D3_L15=[73170]Stopped Editing.
+D3_L16=[73283]Started Editing.
+D3_L17=[74095]Stopped Editing.
+D3_L18=[74674]Started Editing.
+D3_L19=[74987]Stopped Editing.
+D3_L20=[75355]Project Opened.
+D3_L21=[75364]Started Editing.
+D3_L22=[75411]Stopped Editing.
+D3_L23=[75411]Project Closed.
+D3_L24=[86224]Project Opened.
+D4=15-04-2016
+D4_L=9
+D4_L1=[160]Started Editing.
+D4_L2=[679]Stopped Editing.
+D4_E=5
+D4_D=0
+D4_L3=[766]Project Closed.
+D4_L4=[783]Project Opened.
+D4_L5=[806]Project Closed.
+D4_L6=[76249]Project Opened.
+D4_L7=[77494]Started Editing.
+D4_L8=[77794]Stopped Editing.
+D4_L9=[78264]Project Closed.
+D5=17-04-2016
+D5_L=2
+D5_L1=[54702]Project Opened.
+D5_L2=[54739]Project Closed.
+
+[Opened Files]
+1=TCC_LuvaVR.c
+t1=34
+Count=1
+2=
+t2=37
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\DriversC:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Program Files (x86)\PICC\Drivers\C:\Program Files (x86)\PICC\Devices\
+[Units]
+Count=1
+1=TCC_LuvaVR (main)
